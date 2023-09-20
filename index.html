@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <!-- Bootstrap css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- icons bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <!-- My css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- css animations  -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- inizio navbar -->
+    <nav id="navbar-wrap" class="transition navbar navbar-expand-lg  fixed-top">
+        <div class="container-fluid d-flex justify-content-evenly">
+          <a class="navbar-brand border-left" href="#">Presto.it</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mx-auto">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Annunci</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About us</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorie
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contatti</a>
+                  </li>
+              </li>
+            </ul>
+            <ul class="navbar-nav fs-5 ">
+                <i class="bi bi-person-fill mx-3"></i>
+                <i class="bi bi-cart-fill"></i>
+            </ul>
+          </div>
+        </div>
+      </nav> 
+<!-- fine navbar -->
+
+<!-- inizio header -->
+<header class="musthead container-fluid ">
+        <div class="row h-100  justify-content-around align-items-center">
+            <div class="col-12 col-md-5 p-5 ">
+                <h1 class="text-center display-1">Titolo Principale</h1>
+                <p class="p-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum perferendis in ipsum doloremque repellat quam nulla iusto laboriosam omnis enim accusamus ducimus deleniti, provident officia eius voluptatum voluptas distinctio?</p>
+            </div>
+            <div class="col-12 col-md-4 ">
+                <img class="img-fluid" src="https://picsum.photos/400" alt="">
+            </div>
+        </div>
+</header>
+<!-- fine header -->
+<!--  inizio frase ad effetto -->
+<div class="container color-p">
+<p class="fs-5 display-1 px-3 mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe natus, rem a delectus quasi incidunt aperiam eum perferendis maxime itaque nemo dolorum facere recusandae accusamus, minus, tenetur at? Nesciunt, maxime?</p>
+</div>
+<!--  fine frase ad effetto -->
+<!-- inizio cards -->
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/600/400" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+           
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/600/400" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+           
+        </div>
+        <div class="col-12 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+                <img src="https://picsum.photos/600/400" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">Card title</h5>
+                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                  <a href="#" class="btn btn-primary">Go somewhere</a>
+                </div>
+              </div> 
+           
+        </div>
+    </div>
+</div>
+<!-- fine cards -->
+<!-- inizio categoria -->
+<div class="container-fluid">
+    <div class="row justify-content-around ">
+        <div class="col-12">
+        <h2 class="text-center color-p display-1 border-bottom mt-4">CATEGORIA</h2>
+    </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center ">
+            <img class="img-custom" src="https://picsum.photos/200" alt="" data-aos="fade-right" data-aos-duration="2000" data-aos-offset="100">
+        </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img class="img-custom" src="https://picsum.photos/201" alt="" data-aos="fade-down" data-aos-duration="1000" data-aos-offset="200">
+        </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img class="img-custom" src="https://picsum.photos/202" alt="" data-aos="fade-left"
+            data-aos-duration="1000"
+            data-aos-offset="300" >
+        </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img class="img-custom" src="https://picsum.photos/203" alt="" data-aos="fade-right"
+            data-aos-duration="1000"
+             >
+        </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img class="img-custom" src="https://picsum.photos/204" alt="" data-aos="fade-up"
+            data-aos-duration="1000"
+            >
+        </div>
+        <div class="col-12 col-md-4 mt-4 d-flex justify-content-center">
+            <img class="img-custom" src="https://picsum.photos/205" alt="" data-aos="fade-left"
+            data-aos-duration="1000"
+            >
+        </div>
+        
+        </div>
+    </div>
+</div>
+<!-- fine categoria -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Aos Js -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+  </script>
+<!-- bootstrap Js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <!-- My Js -->
+    <script src="./main.js"></script>
+
+  </body>
+</html>
