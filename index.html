@@ -15,9 +15,9 @@
   </head>
   <body>
     <!-- inizio navbar -->
-    <nav id="navbar-wrap" class="transition navbar navbar-expand-lg  fixed-top">
+    <nav id="navbar-wrap" class="transition navbar navbar-dark navbar-expand-lg  fixed-top ">
         <div class="container-fluid d-flex justify-content-evenly">
-          <a class="navbar-brand border-left" href="#">Presto.it</a>
+          <a class="navbar-brand border-left color-a" href="#"><span class="color-v">Pre</span><span class="color-s">sto</span>.it</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -59,18 +59,22 @@
 <header class="musthead container-fluid ">
         <div class="row h-100  justify-content-around align-items-center">
             <div class="col-12 col-md-5 p-5 ">
-                <h1 class="text-center display-1">Titolo Principale</h1>
-                <p class="p-5 text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum perferendis in ipsum doloremque repellat quam nulla iusto laboriosam omnis enim accusamus ducimus deleniti, provident officia eius voluptatum voluptas distinctio?</p>
+                <h1 class="text-center color-s display-1">Orizzonti Viaggi</h1>
+                <p class="p-3 text-center color-s">Lorem ipsum dolor sit amet consectetur adipisicing elit. At cum perferendis in ipsum doloremque repellat quam nulla iusto laboriosam omnis enim accusamus ducimus deleniti, provident officia eius voluptatum voluptas distinctio?</p>
+                <div class="d-flex justify-content-evenly">
+                  <button class="btn-compra">COMPRA ORA</button>
+                  <button class="btn-esplora">ESPLORA</button>
+                </div>
             </div>
             <div class="col-12 col-md-4 ">
-                <img class="img-fluid" src="https://picsum.photos/400" alt="">
+                <img class="img-fluid img-colosseo" src="https://media.istockphoto.com/id/539115110/it/foto/colosseo-di-roma-e-sole-mattutino-italia.jpg?s=612x612&w=0&k=20&c=ngbBMGVEkJxHsnt4SN7ZuncEnRenq2tFI8V0-zCg4pw=" alt="">
             </div>
         </div>
 </header>
 <!-- fine header -->
 <!--  inizio frase ad effetto -->
 <div class="container color-p">
-<p class="fs-5 display-1 px-3 mt-5">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe natus, rem a delectus quasi incidunt aperiam eum perferendis maxime itaque nemo dolorum facere recusandae accusamus, minus, tenetur at? Nesciunt, maxime?</p>
+<p class="fs-5 display-1 px-3 mt-5 border-bottom">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Saepe natus, rem a delectus quasi incidunt aperiam eum perferendis maxime itaque nemo dolorum facere recusandae accusamus, minus, tenetur at? Nesciunt, maxime?</p>
 </div>
 <!--  fine frase ad effetto -->
 <!-- inizio cards -->
@@ -149,6 +153,25 @@
     </div>
 </div>
 <!-- fine categoria -->
+<!-- inizio articles number -->
+<section class="container mt-5">
+  <div class="row justify-content-around">
+    <div class="col-12 col-md-3 articles-number">
+        <h4 class="  display-6 color-s text-center ">Articoli</h4> 
+        <p> <span id="articlesNumber" >0</span>+</p>
+        
+    </div>
+    <div class="col-12 col-md-3 articles-number">
+        <h4 class="  display-6 color-s text-center ">Prodotti Totali</h4> 
+        <p> <span id="productsNumber" >0</span>+</p>
+    </div>
+    <div class="col-12 col-md-3 articles-number">
+        <h4 class=" display-6 color-s text-center">Utenti</h4> 
+        <p> <span id="usersNumber" >0</span>+</p>
+    </div>
+  </div>
+</section>
+<!-- fine articles number -->
 
 
 

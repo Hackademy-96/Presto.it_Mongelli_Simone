@@ -1,7 +1,11 @@
 :root{
     --color-P: rgba(0, 72, 139, 0.885);
     --color-S: white;
-    --color-A: rgba(255, 234, 0, 0.881);
+    --color-A: rgb(255, 0, 0);
+    --color-V: rgb(2, 176, 2); 
+}
+.color-v{
+    color: var(--color-V);
 }
 .altezza-pagina{
     height: 1000px;
@@ -9,10 +13,16 @@
 
 .musthead{
     height: 75vh;
-    background-color:var(--color-P) ;
+    background: linear-gradient(180deg,rgba(0, 72, 139, 0.885) 34%, rgba(255,255,255,0.5271358543417367) 100%, rgba(255,255,255,0.9949229691876751) 92%);
 }
 .color-p{
     color: var(--color-P);
+}
+.color-a{
+    color: var(--color-A);
+}
+.color-s{
+    color:var(--color-S)
 }
 .img-custom{
     border-radius:50% ;
@@ -26,13 +36,47 @@
 }
 .navbar-wrap{
     margin-top: 10vh;
-    margin-left: 5vh;
-    margin-right: 5vh;
+    margin-left: 15vh;
+    margin-right: 15vh;
     background: linear-gradient(0deg, rgba(0,72,139,1) 0%, rgba(255,255,255,0.3267682072829131) 50%, rgba(0,72,139,1) 100%);
-    backdrop-filter: blur(10px);
-    /* border: 1px solid black; */
-    border-radius: 10px;
+    backdrop-filter: blur(6px);
+    border: 2px solid rgba(0,72,139,1);
+    border-radius: 15px;
+    
 }
 .transition{
-    transition: 2s;
+    transition: 1s;
+}
+.articles-number{
+    height: 10vh;
+    border-radius: 10px;
+    background: linear-gradient(0deg, rgba(0,72,139,1) 0%, rgba(255,255,255,0.3267682072829131) 50%, rgba(0,72,139,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.btn-compra{
+    background: linear-gradient(0deg, rgba(0, 139, 44, 0.75) 0%, rgb(255, 255, 255) 50%, rgb(139, 0, 0) 100%);
+    border-radius: 10px;
+    border: 0;
+}
+.btn-compra:hover{
+    background: linear-gradient(0deg, rgba(85, 159, 109, 0.75) 0%, rgb(255, 255, 255) 50%, rgb(136, 54, 54) 100%);
+}
+.btn-esplora{
+    background: linear-gradient(0deg, rgba(0, 139, 44, 0.75) 0%, rgb(255, 255, 255) 50%, rgb(139, 0, 0) 100%);
+    border-radius: 10px;
+    border: 0;
+    
+}
+.btn-esplora:hover{
+    background: linear-gradient(0deg, rgba(85, 159, 109, 0.75) 0%, rgb(255, 255, 255) 50%, rgb(136, 54, 54) 100%);
+   
+}
+
+.img-colosseo{
+    border: 2px solid white;
+    padding: 3px;
 }
