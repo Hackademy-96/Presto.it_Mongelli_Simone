@@ -28,11 +28,6 @@ let interval = setInterval( ()=>{
 }
 
 
-
-
-
-
-
 // INTERSECTION OBSERVER
 let isEntered= false;
 let observer = new IntersectionObserver( (entra)=>{
@@ -48,4 +43,4 @@ entra.forEach( (entry)=>{
 } )
 
 
-observer.observe(articlesNumber)
+observer.observe(articlesNumber);
