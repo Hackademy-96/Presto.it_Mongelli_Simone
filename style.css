@@ -84,3 +84,62 @@
     border: 2px solid white;
     padding: 3px;
 }
+
+.bg-filter{
+    background-color: rgba(128, 128, 128, 0.067);
+    height: 55vh;
+    
+}
+
+/* Swiper carousel */
+.swiper {
+    width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .swiper-slide {
+    background-position: center;
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+  .swiper-slide img {
+    display: block;
+    
+  }
+  .img-card-carousel{
+    height: 50px;
+    width: 50px;
+    border: 2px solid var(--color-S);
+    padding: 3px;
+  }
+
+  .bg-swiper{
+    background-color: var(--color-P);
+    border-radius: 10px;
+  }
+  .div-custom{
+    display: inline;
+    justify-content: space-evenly;
+  }
+
+  .logo-custom{
+    width: 5vw;
+    height: 5vh;
+    border-radius: 50%;
+  }
+
+  @media screen and (max-width: 600px){
+
+    .navbar-wrap{
+        margin-top: 0;
+        margin-left: 0;
+        margin-right: 0;
+        border: 0;
+        border-radius: 0;
+        
+    }
+
+  }

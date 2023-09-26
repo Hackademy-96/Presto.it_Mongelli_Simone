@@ -21,7 +21,7 @@ fetch("./annunci.json").then( (response)=> response.json()).then( (data)=>{
     
 array.forEach((card, i)=> {
     let div = document.createElement("div")
-    div.classList.add("col-12", "col-md-6", "col-lg-4", "my-5" )
+    div.classList.add("col-12", "col-md-6", "col-lg-4", "mb-5" )
     div.innerHTML = `
         <div class="card">
             <div class="overflow-hidden">
@@ -32,7 +32,7 @@ array.forEach((card, i)=> {
             <h5 class="card-title">${card.nome}</h5>
             <p class="">${card.descrizione}</p>
             <p class="card-text">${card.categoria}</p>
-            <p class="card-text fw-bold">Prezzo: ${card.prezzo}</p>
+            <p class="card-text fw-bold">Prezzo: ${card.prezzo}€</p>
             <div class="d-flex justify-content-between">
                 <a href="#" class="btn btn-outline-info">Aggiungi al carrello</a>
                 <i class="bi bi-heart fs-4"></i>
@@ -46,7 +46,7 @@ array.forEach((card, i)=> {
 });
 }
 creatCards(data);
-
+// filtro per categoria 
 let categoryButtons = document.querySelector("#categoryButtons")
 
 function setCategories(){
@@ -74,21 +74,22 @@ function setCategories(){
 setCategories();
 
 let inputChecks = document.querySelectorAll(".form-check-input")
-function filterByCategory(){
+
+function filterByCategory(array){
     let arrayButtons = Array.from( inputChecks)
     let checked = arrayButtons.find((el)=> el.checked)
     if(checked.id == "All"){
-        creatCards(data);
+        return array;
     }else{
-    let filtered = data.filter((el)=> el.categoria == checked.id)
-    creatCards(filtered);
+    let filtered = array.filter((el)=> el.categoria == checked.id)
+    return filtered;
 }
 
 
 }
 inputChecks.forEach((radioButton)=>{
     radioButton.addEventListener("click", ()=>{
-        filterByCategory();
+        globalFilter();
 
 })
 })
@@ -109,17 +110,58 @@ function minMaxPrice(){
 }
 minMaxPrice();
 
-function filterByPrice(){
+function filterByPrice(array){
     
-    let filtered = data.filter((el)=> el.prezzo <= inputPrice.value)
-    ;
-    creatCards(filtered);
+    let filtered = array.filter((el)=> el.prezzo <= inputPrice.value).sort((a,b)=> b.prezzo - a.prezzo) 
+    price.innerHTML = inputPrice.value;
+    return filtered ;
 
 }
 inputPrice.addEventListener("input", ()=>{
-    filterByPrice();
+    globalFilter();
 
 })
 
+// filtro per parola 
+
+let wordInput = document.querySelector("#wordInput")
+
+function filterByWord(array){
+    let value = wordInput.value;
+    let filtered  = array.filter((el)=> el.nome.toLowerCase().includes(value.toLowerCase()))
+    return filtered;
+}
+wordInput.addEventListener("input", ()=>{
+    globalFilter();
+})
+
+function globalFilter(){
+    let filteredByCategory = filterByCategory(data);
+
+    let filteredByPrice = filterByPrice(filteredByCategory);
+
+    let filteredByWord = filterByWord(filteredByPrice);
+    creatCards(filteredByWord);
+}
 
 } )
+
+// Swiper 
+
+var swiper = new Swiper(".mySwiper", {
+    effect: "coverflow",
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: "auto",
+    coverflowEffect: {
+      rotate: 50,
+      stretch: 0,
+      depth: 100,
+      modifier: 1,
+      slideShadows: false,
+    },
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  });
+
